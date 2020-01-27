@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>미소</title>
+    <title>미소-예약하기</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>
+            <h1 class="logo">
                 <a href="#">
                     <img src="../assets/images/img-logo.png" alt="미소 로고">
                 </a>
@@ -22,14 +22,53 @@
         </header>
         <main class="main clearfix">
             <div class="content">
-                <h3>정기청소 예약</h3>
-                <p>청소를 언제하고 싶으신가요?</p>
-                <button type="submit">에약하기</button>
+                <section class="group group1">
+                    <h3>정기청소 예약</h3>
+                    <p>청소를 언제하고 싶으신가요?</p>
+                    <button type="submit" class="date">2월 7일 금요일</button>
+                </section>
+                <section class="group group2">
+                    <div class="times">
+                        <form action="">
+                            <p>서비스 시간을 선택해주세요</p>
+                            <input type="radio" id="clock3" name="times"><label for="clock3">3시간</label>
+                            <input type="radio" id="clock4" name="times"><label for="clock4">4시간</label>
+                            <input type="radio" id="clock8" name="times"><label for="clock8">8시간</label>
+                        </form>
+                        <form action="" class="clock">
+                            <p>시작 시간을 선택해주세요</p>
+                            <input type="radio" id="time1" name="clock"><label for="time1">오전 10시</label>
+                            <input type="radio" id="time2" name="clock"><label for="time2">오후 2시</label>
+                        </form>
+                        <span class="check">오전 10시~오후 1시</span>
+                        <div class="notice-item">
+                            <p class="notice">서비스 요금은 주소에 따라 다르게 책정됩니다</p>
+                            <a href="#">상세 가격 안내 보기</a>
+                        </div>
+                    </div>
+                    <div class="week">
+                        <form action="">
+                            <p>주기를 선택해주세요</p>
+                            <input type="radio" id="1week" name="week"><label for="1week">매주</label>
+                            <input type="radio" id="2week" name="week"><label for="2week">2주</label>
+                            <input type="radio" id="month" name="week"><label for="month">4주</label>
+                        </form>
+                        <span class="check">4주마다 금요일에 청소</span>
+                    </div>
+                    <button class="next" type="submit">다음으로 진행</button>
+                </section>
+                <section class="group group3">
+                    <p>연락처를 인증해주세요.</p>
+                    <div class="input-group">
+                        <input type="tel" placeholder="휴대전화 번호">
+                        <button type="submit" class="btn-phone">인증번호 받기</button>
+                    </div>
+                </section>
             </div>
         </main>
         <div class="footer-bg">
             <footer class="footer">
-                <small class="copyright">© 2019. 유한회사 미소. Miso, Inc. All Rights Reserved.</small>
+                <p class="copyright">© 2019. 유한회사 미소. Miso, Inc. All Rights Reserved.</p>
                 <address class="address">
                     <span>사업자등록번호: 291-87-00271</span>
                     <span>인허가번호: 2016-3220163-14-5-00019</span>
