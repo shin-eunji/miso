@@ -402,7 +402,9 @@ input[type="radio"]:disabled {
   position: relative;
   top: 2px;
   margin: 0 3px;
+  color: red !important;
 }
 .footer ul li a {
   color: #777;
+
 }
