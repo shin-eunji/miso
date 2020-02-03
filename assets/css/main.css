@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+body {
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+}
+strong {
+    font-size: 40px;
+    font-weight: 700;
+    color:#fff;
+}
+em {
+    font-size: 40px;
+    font-weight: 700;
+}
+.link {
+    color:#055cf5;
+}
+.link::after{
+
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border:1px solid red;
+}
+.inner-hf {
+    width: 940px;
+    margin: 0 auto;
+}
+.inner {
+    width: 830px;
+    margin: 0 auto;
+}
+.header .header-logo {
+    float: left;
+}
+.header .header-logo a {
+    display: block;
+    padding: 0 10px;
+}
+.header-nav {
+}
+.header-menu {
+    float: left;
+}
+.header-menu > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.header-menu li > a {}
+.header-menu span {}
+.header-menu-list {
+    float: right;
+}
+.header-menu-list li {
+}
+.header-menu-list li a {}
+.header-submenu {
+    float: right;
+    
+}
+.header-submenu li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.header-submenu a {}
+/* visual */
+.visual {
+    height: 700px;
+}
+.visual .reservation {
+    padding: 120px 0;
+    position: relative;
+}
+.reservation a {
+    background-color: aqua;
+    padding: 20px;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.reservation p {
+    color:#fff;
+    line-height: 1.5;
+}
+/* branding */
+.branding {
+    background-image: url(../images/main-2@2x.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    height:300px;
+    background-position: bottom right;
+    position: relative;
+}
+.branding .link{
+    position: absolute;
+    bottom:60%;
+}
+.branding p{
+    font-size: 30px;
+    font-weight:bold;
+    line-height: 1.5;
+}
+/* main */
+.main-helper, .main-move{
+    display:inline-block;
+    width:390px;
+    height:300px;
+    margin: 30px 10px;
+}
+.main-helper a{
+    display:block;
+    background: url(../images/main-3-1-desktop@2x.jpg) 100% no-repeat;
+    height: 100%;
+}
+.main-move a{
+    display:block;
+    background: url(../images/main-3-2-desktop@2x.jpg) 100% no-repeat;
+    height: 100%;
+}
