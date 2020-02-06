@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>미소</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header class="header">
@@ -21,7 +21,8 @@
                     <li><a href="" title="가사도우미 서비스">가사도우미</a></li>
                     <li><a href="" title="이사 서비스">이사</a></li>
                     <li>
-                        <span title="다른 홈 서비스:이사청소, 침대가전청소, 펫시팅, 더많은 서비스" tabindex="0">다른 홈 서비스</span>
+                        <span title="다른 홈 서비스:이사청소, 침대가전청소, 펫시팅, 더많은 서비스" tabindex="0">
+                            <a href="./more.html">다른 홈 서비스</a></span>
                         <ul class="header-menu-list" hidden>
                             <li><a href="" title="이사청소 서비스">이사청소</a></li>
                             <li><a href="" title="침대가전청소 서비스">침대&sdot;가전 청소</a></li>
@@ -42,9 +43,9 @@
             <h2 class="a11y-hidden">
                 미소의 예약하기
             </h2>
-            <a href="./reservation/reservation.html">예약하기</a>
-            <strong>미소<br/> 일상의 변화</strong>
-            <p>모두의 일상이 행복하도록<br/> 미소가 함께할게요</p>
+            <a class="btn-reservation" href="./reservation/reservation.html">예약하기</a>
+            <strong class="visual-title">미소<br/> 일상의 변화</strong>
+            <p  class="visual-txt">모두의 일상이 행복하도록<br/> 미소가 함께할게요</p>
         </div>
     </section>
     <section class="branding inner">
@@ -52,13 +53,13 @@
             미소는 이런 회사입니다.
         </h2>
         <a href="#" class="link">자세히 보기</a>
-        <p>일상에 필요한 모든 것을<br/> 쉽고 간편하게 만들어갑니다</p>
+        <p class="branding-title">일상에 필요한 모든 것을<br/> 쉽고 간편하게 만들어갑니다</p>
     </section>
     <main class="main inner">
         <h2 class="a11y-hidden">            
             미소의 전체 서비스
         </h2>
-        <em >생활의 모든것, 홈서비스 미소</em>
+        <em class="main-title">생활의 모든것, 홈서비스 미소</em>
         <section class="main-helper">
             <a href="#">
                 <h3>가사도우미</h3>
@@ -88,17 +89,17 @@
             </a>
         </secion>
         <section class="main-serviceMore">
-           <h3>더 많은 서비스</h3> 
-           <p>인테리어, 도배장판, 세차 등 다양한 홈서비스를 미소에서 예약하세요.</p>
-           <a href="#" class="link">자세히 보기</a>
+            <h3>더 많은 서비스</h3> 
+            <p>인테리어, 도배장판, 세차 등 다양한 홈서비스를 미소에서 예약하세요.</p>
+            <a href="#" class="link">자세히 보기</a>
         </section>
     </main>
     <section class="belief inner">
         <h2 class="a11y-hidden">
             미소의 브랜드 철학
         </h2>
-        <em>고객을 우선으로 생각합니다</em>
-        <p>모든 고객이 만족할 수 있는 최고의 서비스를 만들기 위해 미소는 고객을 먼저 생각합니다.</p>
+        <em class="main-title">고객을 우선으로 생각합니다</em>
+        <p class="belief-text">모든 고객이 만족할 수 있는 최고의 서비스를 만들기 위해 미소는 고객을 먼저 생각합니다.</p>
         <article class="belief-quality">
             <img src="./assets/images/main-4-1@2x.png" alt="품질">
             <p class="title">품질은 완벽하게</p>
@@ -126,23 +127,23 @@
         <h2 class="a11y-hidden">
             미소 서비스의 리뷰입니다.
         </h2>
-        <em>150만이 검증한 홈서비스</em>
+        <em class="main-title">150만이 검증한 홈서비스</em>
         <article class="review-box">
             <div></div>
-            <p class="title">서울 김* 고객님(가사도우미 후기)</p>
-            <p class="txt">미소 덕분에 우리집 광명 찾았어요! 싱크대에 오래된 묵은때를 제거하는 방법도 알려주시고, 냉장고와 가스레인지 묵은 때까지 순식간에 제거해주셨어요.</p>
+            <p class="review-title">서울 김* 고객님(가사도우미 후기)</p>
+            <p class="review-text">미소 덕분에 우리집 광명 찾았어요! 싱크대에 오래된 묵은때를 제거하는 방법도 알려주시고, 냉장고와 가스레인지 묵은 때까지 순식간에 제거해주셨어요.</p>
             <a href="" class="link" title="리뷰 자세히보기">자세히 보기</a>
         </article>
         <article class="review-box">
             <div></div>
-            <p class="title">경기 이* 고객님(가사도우미 후기)</p>
-            <p class="txt">퇴근을 하고 돌아오니 아기방이 깨끗해지고, 화장실 세면대도 반짝반짝 광이 났어요. 혹시 몰라 요청드린 것까지 세심하게 청소해주셔서 너무 좋았어요!</p>
+            <p class="review-title">경기 이* 고객님(가사도우미 후기)</p>
+            <p class="review-text">퇴근을 하고 돌아오니 아기방이 깨끗해지고, 화장실 세면대도 반짝반짝 광이 났어요. 혹시 몰라 요청드린 것까지 세심하게 청소해주셔서 너무 좋았어요!</p>
             <a href="" class="link" title="리뷰 자세히보기">자세히 보기</a>
         </article>
         <article class="review-box">
             <div></div>
-            <p class="title">이교*고객님(가정이사 후기)</p>
-            <p class="txt">처음에 제휴업체가 오셔서 360카메라로 집 전체를 촬영하는데, 필요한 물건이 사진에 담기니까 이사할 때 추가 요금을 방지할 수 있어 안심이 됐어요.</p>
+            <p class="review-title">이교*고객님(가정이사 후기)</p>
+            <p class="review-text">처음에 제휴업체가 오셔서 360카메라로 집 전체를 촬영하는데, 필요한 물건이 사진에 담기니까 이사할 때 추가 요금을 방지할 수 있어 안심이 됐어요.</p>
             <a href="#" class="link" title="리뷰 자세히보기">자세히 보기</a>
         </article>
     </section>
@@ -150,14 +151,14 @@
         <h2 class="a11y-hidden">
             미소의 인재채용 
         </h2>        
-        <em>미소와 함께 해요</em>
-        <p>미소 홈서비스를 함께 만들어갈<br/> 인재를 찾고 있습니다.</p>
+        <em class="main-title">미소와 함께 해요</em>
+        <p class="together-text">미소 홈서비스를 함께 만들어갈<br/>인재를 찾고 있습니다.</p>
         <a href="#" class="link"title="인재채용 자세히보기">자세히보기</a>
     </section>
     <div class="footer-bg">
         <footer class="footer inner-hf clearfix">
             <a href="#"><img src="./assets/images/img-logo.png" alt="miso"></a>
-            <ul>
+            <ul class="footer-blog">
                 <li><a href="">블로그</a></li>
                 <li><a href="">이용약관</a></li>
                 <li><a href="">개인정보</a></li>

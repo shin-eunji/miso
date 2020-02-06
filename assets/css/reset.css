@@ -124,7 +124,24 @@ body {
   font-family: "Spoqa Han Sans";
   font-weight: 400;
   background-color: #fff;
-  color: #181818;
+  color: #2e3035;
+}
+strong {
+  font-size: 40px;
+  font-weight: 700;
+  color:#fff;
+}
+.main-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color:#055cf5;
+}
+.link::after{
+
 }
 /* float를 해제하기 위한 clear 선언 */
 .clearfix::after {
