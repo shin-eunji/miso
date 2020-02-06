@@ -62,7 +62,7 @@ body {
   padding: 120px 0;
   position: relative;
 }
-.reservation .btn-reservation {
+.btn-reservation {
   background-color: #055cf5;
   padding: 14px 0;
   position: absolute;
@@ -129,7 +129,7 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.main .sub-title {
+.sub-title {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -309,6 +309,391 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+
+/* 민욱 - 이사청소 */
+/* body {
+  font-size:16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color:#2E3035;    
+}
+.a11y-hidden{
+  display: inline-block;
+  width:1px;
+  height:1px;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+.h3{
+  font-size: 20px;
+  font-weight: 700;
+  margin:30px 0;
+}
+.cleaning .br{
+  border-bottom:1px solid #a3a7ae;
+  padding:30px 0 40px;
+}
+em {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  padding:30px 0 40px;
+}
+img{
+  display: inline-block;
+}
+.link {
+  color:#055cf5;
+} */
+
+/* float를 해제하기 위한 clear 선언 */
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+} */
+.float-left {
+  float:left;
+}
+.float-right {
+  float:right;
+}
+.header,
+.main__move, 
+.footer
+{
+  position: relative;
+  width:100%;   
+    
+}
+.main__service,
+.main__info,
+.main__range,
+.main__app,
+.main__QA,
+.homeservice {
+  position: relative;
+  width:800px;
+  margin:0 auto;     
+}
+/* TABLE */
+.table{
+  width:100%;
+  border:1px solid #e3e5ea;
+  text-align: center;
+  font-size: 1rem;
+}
+.table th{
+  font-weight: 700;
+  
+}
+.table tr, .table td{
+  border:1px solid #e3e5ea;    
+}
+.table th, .table td{
+  padding: 15px;
+  width:50%;
+}
+.table th:last-child, td:last-child{
+  background-color: #f3f4f8;
+}
+.main--bg {
+  background-image: url("https://miso.kr/deep-clean-page/deepclean-desktop.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  height: 540px;
+  margin-bottom: 30px;
+}
+.main__move section {
+  /* border-bottom: 1px solid #a5a6a8; */
+  /* padding-bottom: 50px; */
+}
+/* HEADER */
+.header-move {
+  /* background-color: tomato; */
+  position: relative;
+  font-size:13px;
+  box-sizing: border-box;
+  width:980px;
+  margin:0 auto;
+  /* background-color: wheat; */
+}
+.header__logo {    
+  float:left;  
+  margin-right: 12px;  
+}
+.header__logo a {
+  display:block;
+  padding: 20px 30px 20px;
+}
+.header__menu {
+  float:left; 
+
+}
+.header__menu__list>li {
+  display: inline-block;
+  padding: 22px 8px 20px;
+ 
+}
+.header__menu__list>li ul {
+  display:none;
+}
+.header__submenu {
+  float:right;    
+}
+.header__submenu li{
+  display:inline-block;
+  padding: 22px 5px 20px;
+}
+/* MAIN */
+/* VISUAL */
+.main__visual__inner {
+  /* margin-left: 380px;    */
+  /* background-color: turquoise; */
+  width:800px;
+  height: 300px;
+  margin:0 auto;
+  position: relative;
+}
+.main__visual__inner h2 {
+  display:block;
+  margin: 100px 0 20px;      
+}
+.main__visual__inner :nth-child(2) {
+  display: block;
+  font-size: 50px;;
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+.main__visual__inner :nth-child(3) {
+  font-size: 20px;
+}
+.main__visual__inner button {
+  margin-top:70px;
+  padding: 15px 80px 18px;
+}
+/* SERVICE */
+.main__service {
+  padding-bottom: 60px;
+  border:1px soilid #555555;
+  /* background-color: thistle; */
+}
+.main__service__container {
+  display:block;
+}
+.main__service__container img{    
+  width:400px;
+  height:300px;    
+  /* margin-right: 48px; */    
+  float: left;    
+}
+.main__service__text {
+  float: right;
+  width: 380px;
+}
+
+.main__service span {    
+  font-size: 19px;
+  font-weight: 600;
+  margin:5px 0 10px;
+}
+/* INFO */
+.main__info__ul{
+  width:800px;
+  border-bottom: 1px solid #f3f4f8;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.main__info__ul li{    
+  display: inline-block;
+  padding: 6px 10px;
+}
+.main__info__range img{
+  width:400px;
+  height:300px;
+  background-size: cover;
+  margin-right: 20px;
+}
+.main__info__detail {
+  display: inline-block;
+  vertical-align: top;
+}
+.main__info__fare>a{
+  display: inline-block;
+  padding:10px 0;
+  margin: 5px 0;
+}
+.main__info__box{
+  padding:30px;
+  position: relative;
+  background: #eff7ff;
+}
+.main__info__box :first-child{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.main__info__box a{
+  position: absolute;
+  top:30px;
+  right:30px;
+}
+.info-on{
+  color: #005cf5;
+  border-bottom: 3px solid #055cf5;
+}
+/* .main__info {
+  background-color: tomato;
+}
+.main__info p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.main__info__ul {
+  display: flex;
+}
+.main__info__img {
+  display: inline-block;
+  background-image: url("https://miso.kr/deep-clean-page/coverage-1@2x.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.main__info__detail {
+  list-style: unset;    
+}
+.main__info__fare {
+  padding:64px 0;
+}
+.main__info__box {
+  background-color: #f3f4f8;
+} */
+/* RANGE */
+.main__range__item {
+  margin-right:10px;
+  float: left;
+}
+.main__range span {
+  display:block;
+  font-weight: 500;
+  font-size: 18px;
+  margin:14px 0;
+}
+.main__range p {
+  width:220px;
+}
+/* APP */
+.main__app {
+  margin-top: 50px;
+}
+.main__app h3 {
+  display: inline-block;
+}
+.main__app__box__img img {
+  width:409px;
+  height: 300px;
+}
+.main__app__box__appimg img{    
+  margin-top: 20px;
+  height: 40px;
+}
+
+/* QA */
+.main .main__QA {
+  border: none;
+}
+.main__QA__list li{
+  padding:10px 0;
+  border-top:1px solid #a5a6a8;    
+}
+.main__QA__list :nth-child(3) {
+  border-bottom: 1px solid #a5a6a8;
+}
+.main__QA a {        
+  margin-top:5px;
+  float: right;
+}
+/* HOMESERVICE */
+.homeservice{
+  padding:88px 0 112px;      
+  position: relative;    
+}
+.homeservice h3 {
+  margin:0 0 10px;
+  padding:0;
+}
+.homeservice p {
+  margin:0 0 15px;
+}
+.homeservice a {
+  display: inline-block;        
+}
+.homeservice img {
+  width:110px;
+  margin-right: 10px;
+}
+.homeservice__items {    
+  width:100%;
+  background-color: #f3f4f8; 
+  box-sizing: border-box;
+  padding:64px 84px;
+  position: relative;
+}
+.homeservice__items--box {
+  position: relative;     
+  height: 200px;   
+  /* background-color: tomato; */
+}
+/* footer */
+/* .footer-bg {
+  background: #262728;
+
+}
+.footer {
+  padding: 20px 0;
+}
+.footer img {
+  
+}
+.footer ul {
+  display:inline-block;
+}
+.footer li {
+  display: inline-block;
+  color: #fff;
+  padding: 5px 10px;
+}
+.footer a {
+  display:inline-block;
+}
+.copyright {
+  display: block;
+  color: #a3a7ae;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.address {
+  display: block;
+  color: #a3a7ae;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.inner-hf {
+  width: 940px;
+  margin: 0 auto;
+} */
+
+
+
+
+
+
+
 
 
 /* 은지 - 예약하기, 더 많은 서비스 견적내기 */
