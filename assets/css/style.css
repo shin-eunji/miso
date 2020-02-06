@@ -313,49 +313,49 @@ body {
 
 /* 은지 - 예약하기, 더 많은 서비스 견적내기 */
 /* 헤더 영역 */
-.header {
+.header-reservation {
   position: relative;
   top: 0;
   height: 60px;
   background-color: #fff;
   border-bottom: 1px solid #e7e7e7;
 }
-.header .logo {
+.header-reservation .logo {
   position: absolute;
   top: 20px;
   left: 60px;
 }
 /* 컨텐츠 영역 */
-.main {
+.main-reservation {
   /* height: 80vh; */
 }
 /* 예약하기 */
-.content {
+.content-reservation {
   text-align: center;
   padding: 130px 0;
 }
-.content h3 {
+.content-reservation h3 {
   color: #333;
   font-size: 2.4rem;
   font-weight: 300;
 }
-.content p {
+.content-reservation p {
   font-size: 1.7rem;
   font-weight: 100;
   padding: 60px 0 0px;
 }
-.content .group {
+.content-reservation .group {
   padding-bottom: 40px;
   width: 460px;
   margin: 0 auto;
 }
-.content .group1 {
+.content-reservation .group1 {
   border-bottom: 1px solid #e7e7e7;
 }
-.content .group2 {
+.content-reservation .group2 {
   border-bottom: 1px solid #e7e7e7;
 }
-.content button {
+.content-reservation button {
   width: 460px;
   background: #055cf5;
   border: 1px solid #055cf5;
@@ -366,7 +366,7 @@ body {
   padding: 12px 0;
   margin: 20px 0;
 }
-.content .date {
+.content-reservation .date {
   border: 2px solid #055cf5;
   background: #fff;
   color: #055cf5;
@@ -461,7 +461,7 @@ input[type="radio"]:disabled {
   border: 0;
   line-height: 2.9rem;
 }
-.content .input-group .btn-phone {
+.content-reservation .input-group .btn-phone {
   float: right;
   position: absolute;
   top: 30px;
@@ -538,40 +538,40 @@ input[type="radio"]:disabled {
   font-size: 14px;
 }
 /* 푸터 영역 */
-.footer-bg {
+.footer-bg-reservation {
   position: relative;
   bottom: 0;
   left: 0;
   background-color: #fff;
   border-top: 1px solid #e7e7e7;
 }
-.footer {
+.footer-reservation {
   padding: 30px 0;
   font-size: .7rem;
   position: absolute;
   top: 0px;
   left: 60px;
 }
-.footer .copyright {
+.footer-reservation .copyright {
   color: #333;
   line-height: 2rem;
 
 }
-.footer .address {
+.footer-reservation .address {
   color: #b3b3b3;
   display: inline;
 }
-.footer ul {
+.footer-reservation ul {
   display: inline-block;
 }
-.footer ul li {
+.footer-reservation ul li {
   float: left;
   position: relative;
   top: 2px;
   margin: 0 3px;
   color: red !important;
 }
-.footer ul li a {
+.footer-reservation ul li a {
   color: #777;
 
 }
