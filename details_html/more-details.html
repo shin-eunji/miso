@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>미소-견적내기</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
 </head>
 <body>
-    <div class="container">
-        <header class="header-build">
-            <h1 class="logo">
-                <a href="../more.html">
-                    <img src="../assets/images/img-logo.png" alt="미소 로고">
+    <div class="container document">
+        <!-- header -->
+        <header class="header-more clearfix">
+            <h1 class="logo-more">
+                <a href="../main.html" target="_blank">
+                    <img src="../assets/images/more/img-logo.png" alt="miso">
                 </a>
             </h1>
+            <a href="#" class="home-menu">HOME</a>
         </header>
+        <!-- 컨텐츠 -->
         <main class="main-build clearfix">
             <section class="content quote">
                 <div class="title">
@@ -53,12 +54,12 @@
                                 <label for="userEdit">참고사항</label>
                                 <textarea name="editor" id="userEdit" cols="30" rows="2" maxlength="1000" placeholder="예: 실크 도배 필요합니다"></textarea>
                             </div>
-                            <a type="submit" class="btn-estimate">견적 받기</a>
+                            <a href="#" title="견적받기" class="btn-estimate">견적 받기</a>
                         </fieldset>
                     </form>
                 </div>
             </section>
-        </main>
+        </main>
     </div>
 </body>
 </html>

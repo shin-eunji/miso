@@ -1,18 +1,96 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
 
-body {
-    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+/* 공통 */
+/* 본문 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-/* 메인 페이지 */
+html, body {
+  font-size: 10px;
+  font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #2e3035;
+}
+/* Font */
+.main-title {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
+}
+.sub-title {
+  display: block;
+  width: 100%;
+  height: 18px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.sub-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin:30px 0;
+}
+strong {
+  font-size: 40px;
+  font-weight: 700;
+  color:#fff;
+}
+b {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+/* Button */
+.link {
+  color:#055cf5;
+  font-size: 1.5rem;
+}
+.link::after{
+  content: "";
+  display: inline-block;
+  vertical-align:-30%;
+  width: 25px;
+  height: 25px;
+  background: url(../images/brand-next-arrow.png) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+/* Color */
+.black {
+  color: #2e3035;
+}
+/* float를 해제하기 위한 clear 선언 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* 숨김 콘텐츠 */
+.a11y-hidden, legend{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
 
 /* Header */
 .header {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 20px;
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 0;
   z-index: 999;
 }
 .inner-hf {
@@ -22,6 +100,7 @@ body {
 .inner {
   width: 830px;
   margin: 0 auto;
+  padding: 50px 0;
 }
 .header .header-logo {
   float: left;
@@ -55,10 +134,15 @@ body {
 /* visual */
 .visual {
   height: 700px;
-  background: url(../images/main-01-desktop.jpg) no-repeat;
   background-size: cover;
 }
-.visual .reservation {
+.main-visual {
+  background: url(../images/main-01-desktop.jpg) no-repeat;
+}
+.move-visual {
+  background: url(../images/deepclean-desktop.jpg) no-repeat;
+}
+.reservation {
   padding: 120px 0;
   position: relative;
 }
@@ -73,6 +157,7 @@ body {
   font-size: 1.8rem;
   width: 250px;
   text-align: center;
+  border-radius: 3px;
 }
 .reservation .visual-title {
   font-size: 6rem;
@@ -81,36 +166,62 @@ body {
 .reservation .visual-txt {
   color:#fff;
   line-height: 1.5;
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-top: 10px;
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin-top: 20px;
 }
 /* branding */
 .branding {
   background-image: url(../images/main-2@2x.png);
-  background-size: 40%;
+  background-size: 45%;
   background-repeat: no-repeat;
-  height:330px;
-  background-position: bottom right;
+  height:480px;
+  background-position: top right;
   position: relative;
-  margin: 60px auto;
-  border-bottom: 1px solid #dadde2;
+  margin: 85px auto 0;
+  border-bottom: 1px solid rgb(218, 221, 226)
 }
 .branding .link{
   position: absolute;
-  bottom:60%;
+  top: 40%;
 }
 .branding .branding-title{
-  font-size: 30px;
   font-weight:bold;
   line-height: 1.5;
+  margin-bottom: 18px;
+  font-size: 31.2px;
+  font-stretch: normal;
+  font-style: normal;
+  color: rgb(46, 48, 53);
+  letter-spacing: -0.018px;
 }
 /* main */
+.main-service{ 
+  margin-top: 64px;
+  margin-bottom: 55px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(218, 221, 226)
+}
+.main-helper h3, .main-move h3{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2e3035;
+  padding: 25px 0 0 20px;
+  margin-bottom: 5px;
+}
+.main-helper p, .main-move p{
+  padding-left: 20px;
+  font-size: 18px;
+  color: #2e3035;
+}
 .main-helper, .main-move{
-  display:inline-block;
-  width:390px;
+  width:400px;
   height:300px;
-  margin: 30px 10px;
+  margin: 64px 0 24px;
 }
 .main-helper a{
   display:block;
@@ -129,15 +240,16 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.sub-title {
-  font-size: 2rem;
-  font-weight: 500;
+.main-cleaning h3, .main-living h3, .main-pet h3{
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e3035;
+  padding: 16px 0 0 16px;
 }
 .main-cleaning, .main-living, .main-pet{
-  display:inline-block;
-  width: 30%;
+  width: 31.3%;
   height: 160px;
-  margin: 30px 10px;
+  margin: 30px 0;
 }
 .main-cleaning a{
   display:block;
@@ -163,9 +275,10 @@ body {
   padding-top: 15px;
 }
 .main-serviceMore {
+  width: 100%;
   position: relative;
   background-color: #eff7ff;
-  padding: 20px 30px 20px 60px;
+  padding: 20px 30px 25px 35px;
 }
 .main-serviceMore h3 {
   font-size: 1.6rem;
@@ -173,18 +286,23 @@ body {
 }
 .main-serviceMore h3::before {
   content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(./../images/home.svg);
+  transform: translateY(15%);
+  margin-right: 15px;
 }
 .main-serviceMore p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-left: 40px;
 }
 .main-serviceMore .link {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 30px;
-  font-size: 1.6rem;
-  font-weight: 500;
 }
-/* 브래든 철학 */
+/* 브랜드 철학 */
 .belief .txt {
   font-size: 2rem;
   font-weight: 400;
@@ -194,20 +312,20 @@ body {
   width: 410px;
   height: 300px;
   float: left;
-  margin-right: 30px;
+  margin-right: 48px;
 }
 [class^="belief-"] {
   width: 100%;
-  height: 380px;
-  
+  height: 320px;
+  margin-top: 60px;
+}
+.belief-text{
+  margin-top: 10px;
+  line-height: 1.5;
 }
 .belief .title {
   font-size: 2rem;
   font-weight: bold;
-}
-.belief P {
-  font-size: 1.7rem;
-  font-weight: 400;
 }
 .belief .app-store a:nth-child(1) {
   display: inline-block;
@@ -224,23 +342,39 @@ body {
   background: url(../images/googleplay.png) no-repeat;
   background-size: 100%;
 }
+.belief .link {
+  margin-top: 100px;
+  display: block;
+}
 .review {
-  padding: 30px 50px;
+  padding: 70px 0;
   background-color: #00395b;
 }
 .review em {
+  width: 100%;
+  margin-bottom: 60px;
   display: block;
   color: #fff;
 }
+.review-wrap{
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
 .review-box {
   position: relative;
-  display: inline-block;
-  width: 28%;
-  height: 190px;
+  width: 31%;
+  height: 220px;
   background-color: #fff;
   box-shadow: 0 0 10px 10px rgba(0,0,0,.1);
   margin: 0 10px;
   padding: 20px;
+}
+.review-star {
+  color: #ffc81f;
+  font-size: 1.6rem;
 }
 .review-box .title {
   font-size: 1.8rem;
@@ -248,7 +382,7 @@ body {
   line-height: 1.5;
   padding-bottom: 10px;
 }
-.review-box .txt {
+.review-text {
   font-size: 1.5rem;
   font-weight: 300;
   height: 86px;
@@ -261,9 +395,10 @@ body {
 }
 /* 인재채용 */
 .together {
+  position: relative;
   padding: 70px 50px 100px;
   background-color: #eef7ff;
-  margin: 30px auto;
+  margin: 90px auto;
   background-image: url(../images/hiring@2x.png);
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -271,19 +406,20 @@ body {
 }
 .together h2 {
   font-size: 2rem;
-
 }
-
+.together .link {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+}
 /* footer */
 .footer-bg {
   background: #262728;
-
+  padding: 25px 0 50px;
 }
-.footer {
-  padding: 20px 0;
-}
-.footer img {
-  
+.footer-bg .inner-hf{
+  width: 1000px;
+  margin: 0 auto;
 }
 .footer .footer-blog {
   display:inline-block;
@@ -293,94 +429,45 @@ body {
   color: #fff;
   padding: 5px 10px;
 }
+.footer-blog a{
+  font-size: 1.6rem;  
+}
 .footer a {
   display:inline-block;
 }
 .copyright {
   display: block;
   color: #a3a7ae;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
   margin-top: 20px;
+  padding-bottom: 5px;
 }
 .address {
   display: block;
   color: #a3a7ae;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
 }
-
-
-/* 민욱 - 이사청소 */
-/* body {
-  font-size:16px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  color:#2E3035;    
-}
-.a11y-hidden{
-  display: inline-block;
-  width:1px;
-  height:1px;
-  overflow: hidden;
-}
-a {
-  text-decoration: none;
-}
-.h3{
-  font-size: 20px;
-  font-weight: 700;
-  margin:30px 0;
-}
-.cleaning .br{
-  border-bottom:1px solid #a3a7ae;
-  padding:30px 0 40px;
-}
-em {
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  padding:30px 0 40px;
-}
-img{
-  display: inline-block;
-}
-.link {
-  color:#055cf5;
-} */
-
-/* float를 해제하기 위한 clear 선언 */
-/* .clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-} */
+/* 이사청소 */
 .float-left {
   float:left;
 }
 .float-right {
   float:right;
 }
-.header,
-.main__move, 
-.footer
-{
-  position: relative;
-  width:100%;   
-    
-}
-.main__service,
-.main__info,
-.main__range,
-.main__app,
-.main__QA,
+.main-service,
+.main-info,
+.main-range,
+.main-app,
+.main-QA,
 .homeservice {
   position: relative;
   width:800px;
   margin:0 auto;     
 }
-/* TABLE */
+/* table */
 .table{
   width:100%;
   border:1px solid #e3e5ea;
@@ -389,7 +476,6 @@ img{
 }
 .table th{
   font-weight: 700;
-  
 }
 .table tr, .table td{
   border:1px solid #e3e5ea;    
@@ -397,6 +483,7 @@ img{
 .table th, .table td{
   padding: 15px;
   width:50%;
+  font-size: 1.6rem;
 }
 .table th:last-child, td:last-child{
   background-color: #f3f4f8;
@@ -409,215 +496,156 @@ img{
   height: 540px;
   margin-bottom: 30px;
 }
-.main__move section {
-  /* border-bottom: 1px solid #a5a6a8; */
-  /* padding-bottom: 50px; */
-}
-/* HEADER */
-.header-move {
-  /* background-color: tomato; */
-  position: relative;
-  font-size:13px;
-  box-sizing: border-box;
-  width:980px;
-  margin:0 auto;
-  /* background-color: wheat; */
-}
-.header__logo {    
-  float:left;  
-  margin-right: 12px;  
-}
-.header__logo a {
-  display:block;
-  padding: 20px 30px 20px;
-}
-.header__menu {
-  float:left; 
-
-}
-.header__menu__list>li {
-  display: inline-block;
-  padding: 22px 8px 20px;
- 
-}
-.header__menu__list>li ul {
-  display:none;
-}
-.header__submenu {
-  float:right;    
-}
-.header__submenu li{
-  display:inline-block;
-  padding: 22px 5px 20px;
-}
-/* MAIN */
-/* VISUAL */
-.main__visual__inner {
-  /* margin-left: 380px;    */
-  /* background-color: turquoise; */
+/* visual */
+.main-visual-inner {
   width:800px;
   height: 300px;
   margin:0 auto;
   position: relative;
 }
-.main__visual__inner h2 {
+.main-visual-inner h2 {
   display:block;
   margin: 100px 0 20px;      
 }
-.main__visual__inner :nth-child(2) {
+.main-visual-inner :nth-child(2) {
   display: block;
   font-size: 50px;;
   font-weight: 900;
   margin: 0 0 16px;
 }
-.main__visual__inner :nth-child(3) {
+.main-visual-inner :nth-child(3) {
   font-size: 20px;
 }
-.main__visual__inner button {
+.main-visual-inner button {
   margin-top:70px;
   padding: 15px 80px 18px;
 }
-/* SERVICE */
-.main__service {
+/* service */
+.main-service {
   padding-bottom: 60px;
-  border:1px soilid #555555;
-  /* background-color: thistle; */
 }
-.main__service__container {
+.main-service-container {
   display:block;
 }
-.main__service__container img{    
+.main-service .main-title{
+  margin-bottom: 30px;
+}
+.main-service-container img{    
   width:400px;
-  height:300px;    
-  /* margin-right: 48px; */    
+  height:300px;      
   float: left;    
 }
-.main__service__text {
+.main-service-text {
   float: right;
   width: 380px;
 }
-
-.main__service span {    
-  font-size: 19px;
+.main-service span {    
+  font-size: 3rem;
   font-weight: 600;
   margin:5px 0 10px;
 }
-/* INFO */
-.main__info__ul{
+/* info */
+.main-info-ul{
   width:800px;
   border-bottom: 1px solid #f3f4f8;
   margin-bottom: 15px;
   font-weight: bold;
 }
-.main__info__ul li{    
+.main-info-ul li{    
   display: inline-block;
   padding: 6px 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #a3a7ae;
 }
-.main__info__range img{
+.main-info-range img{
   width:400px;
   height:300px;
   background-size: cover;
   margin-right: 20px;
 }
-.main__info__detail {
+.main-info-detail {
   display: inline-block;
   vertical-align: top;
 }
-.main__info__fare>a{
+.main-info-detail li {
+  font-size: 1.5rem;
+}
+.main-info-fare>a{
   display: inline-block;
   padding:10px 0;
   margin: 5px 0;
 }
-.main__info__box{
+.main-info-box{
   padding:30px;
   position: relative;
   background: #eff7ff;
+  font-size: 1.5rem;
 }
-.main__info__box :first-child{
+.main-info-box p:first-child{
+  font-size: 1.7rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
-.main__info__box a{
+.main-info-box a{
   position: absolute;
   top:30px;
   right:30px;
 }
-.info-on{
+.main-info-ul .info-on{
   color: #005cf5;
   border-bottom: 3px solid #055cf5;
 }
-/* .main__info {
-  background-color: tomato;
-}
-.main__info p {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-.main__info__ul {
+/* Ramge */
+.main-range .flex {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
-.main__info__img {
-  display: inline-block;
-  background-image: url("https://miso.kr/deep-clean-page/coverage-1@2x.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-}
-.main__info__detail {
-  list-style: unset;    
-}
-.main__info__fare {
-  padding:64px 0;
-}
-.main__info__box {
-  background-color: #f3f4f8;
-} */
-/* RANGE */
-.main__range__item {
-  margin-right:10px;
-  float: left;
-}
-.main__range span {
+.main-range span {
   display:block;
   font-weight: 500;
   font-size: 18px;
   margin:14px 0;
 }
-.main__range p {
+.main-range p {
   width:220px;
 }
-/* APP */
-.main__app {
+/* App */
+.main-app {
   margin-top: 50px;
 }
-.main__app h3 {
+.main-app h3 {
   display: inline-block;
 }
-.main__app__box__img img {
+.main-app-box-img img {
   width:409px;
   height: 300px;
 }
-.main__app__box__appimg img{    
+.main-app-box-appimg img{    
   margin-top: 20px;
   height: 40px;
 }
-
 /* QA */
-.main .main__QA {
+.main .main-QA {
   border: none;
 }
-.main__QA__list li{
-  padding:10px 0;
-  border-top:1px solid #a5a6a8;    
+.main-QA-list {
+  margin-top: 30px;
 }
-.main__QA__list :nth-child(3) {
-  border-bottom: 1px solid #a5a6a8;
+.main-QA-list li{
+  padding: 15px 0 15px 10px;
+  border-top:1px solid #e3e5ea;
+  font-size: 1.5rem;  
+}
+.main-QA-list :nth-child(3) {
+  border-bottom: 1px solid #e3e5ea;
 }
 .main__QA a {        
   margin-top:5px;
   float: right;
 }
-/* HOMESERVICE */
+/* Homeservice */
 .homeservice{
   padding:88px 0 112px;      
   position: relative;    
@@ -636,68 +664,18 @@ img{
   width:110px;
   margin-right: 10px;
 }
-.homeservice__items {    
+.homeservice-items {    
   width:100%;
   background-color: #f3f4f8; 
   box-sizing: border-box;
   padding:64px 84px;
   position: relative;
 }
-.homeservice__items--box {
+.homeservice-items--box {
   position: relative;     
   height: 200px;   
-  /* background-color: tomato; */
 }
-/* footer */
-/* .footer-bg {
-  background: #262728;
-
-}
-.footer {
-  padding: 20px 0;
-}
-.footer img {
-  
-}
-.footer ul {
-  display:inline-block;
-}
-.footer li {
-  display: inline-block;
-  color: #fff;
-  padding: 5px 10px;
-}
-.footer a {
-  display:inline-block;
-}
-.copyright {
-  display: block;
-  color: #a3a7ae;
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 20px;
-}
-.address {
-  display: block;
-  color: #a3a7ae;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-.inner-hf {
-  width: 940px;
-  margin: 0 auto;
-} */
-
-
-
-
-
-
-
-
-
-/* 은지 - 예약하기, 더 많은 서비스 견적내기 */
-/* 헤더 영역 */
+/* 예약하기 */
 .header-reservation {
   position: relative;
   top: 0;
@@ -711,9 +689,6 @@ img{
   left: 60px;
 }
 /* 컨텐츠 영역 */
-.main-reservation {
-  /* height: 80vh; */
-}
 /* 예약하기 */
 .content-reservation {
   text-align: center;
@@ -721,13 +696,12 @@ img{
 }
 .content-reservation h3 {
   color: #333;
-  font-size: 2.4rem;
+  font-size: 4rem;
   font-weight: 300;
 }
 .content-reservation p {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-weight: 100;
-  padding: 60px 0 0px;
 }
 .content-reservation .group {
   padding-bottom: 40px;
@@ -743,9 +717,8 @@ img{
 .content-reservation button {
   width: 460px;
   background: #055cf5;
-  border: 1px solid #055cf5;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   border-radius: 5px;
   font-weight: 400;
   padding: 12px 0;
@@ -759,7 +732,7 @@ img{
 .group .check {
   position: relative;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .group .check::before {
   content: "";
@@ -778,7 +751,7 @@ img{
   font-size: .85rem;
 }
 .notice-item .notice {
-  font-size: .9rem;
+  font-size: 1.4rem;
   font-weight: 400;
   padding: 20px 0 10px;
 }
@@ -786,12 +759,13 @@ img{
   color: #055cf5;
   font-weight: 500;
   padding: 10px 0;
+  font-size: 1.5rem;
 }
 .group .next {
   border-radius: 30px;
   width: 150px;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,.1);
-  font-size: 14px;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 input[type="radio"] {
@@ -802,7 +776,7 @@ input[type="radio"] + label  {
   width: 32%;
   color: #b3b3b3;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   background-color: #fff;
   border: 1px solid #b3b3b3;
   padding: 1.3rem 0;
@@ -838,13 +812,13 @@ input[type="radio"]:disabled {
   background-color: #f2f2f2;
   color: inherit;
   width: 80%;
-  font-size: 1rem;
+  font-size: 1.7rem;
   padding-left: 15px;
   outline: 0;
   border-radius: 5px 0 0 5px;
   box-shadow: none;
   border: 0;
-  line-height: 2.9rem;
+  line-height: 4.4rem;
 }
 .content-reservation .input-group .btn-phone {
   float: right;
@@ -856,71 +830,7 @@ input[type="radio"]:disabled {
   border-radius: 0 5px 5px 0;
   margin: 0;
   z-index: 10;
-}
-/* 견적내기-폼 영역 */
-.quote {
-  text-align: left;
-  margin: 0px 30px;
-  padding: 30px 0;
-}
-.quote .title {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.quote .title h3 {
-  font-weight: 400;
-}
-.quote .title .img {
-  position: absolute;
-  top: 0px;
-  right: 0;
-}
-.quote .review-item {
-  color: #fece32;
-  margin-top: 10px;
-}
-.quote .sub-text {
-  color: #333;
-  font-size: .9rem;
-  line-height: 24px;
-  font-weight: 400;
-  padding: 30px 0 80px;
-}
-.editor-detail {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.editor-detail .item label {
-  display: block;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.editor-detail .item input, .editor-detail .item textarea {
-  display: block;
-  width: 100%;
-  height: 40px;
-  padding: 8px 12px;
-  font-size: 14px;
-  color: inherit;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-.editor-detail .item textarea {
-  height: auto;
-}
-.btn-estimate {
-  font-size: inherit;
-  padding: 9px 15px;
-  border-radius: 0;
-  background-color: #3898EC;
-  color: #fff;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 /* 푸터 영역 */
 .footer-bg-reservation {
@@ -940,7 +850,6 @@ input[type="radio"]:disabled {
 .footer-reservation .copyright {
   color: #333;
   line-height: 2rem;
-
 }
 .footer-reservation .address {
   color: #b3b3b3;
@@ -960,13 +869,7 @@ input[type="radio"]:disabled {
   color: #777;
 
 }
-
-
-
-
-
-/* 하은 - 더 많은 서비스 */
-/* 헤더 */
+/* 더 많은 서비스 */
 .header-more {
   box-sizing: border-box;
   position: fixed; 
@@ -998,12 +901,8 @@ input[type="radio"]:disabled {
   color: #055cf5;
   font-size: 11px;
   font-weight: 600;
-  font-family: Montserrat, sans-serif;;
   letter-spacing: 1px;
 }
-
-
-/* 비주얼 */
 .main-more{
   margin: 130px 0 0 0;
 }
@@ -1011,34 +910,26 @@ input[type="radio"]:disabled {
   height: 610px;
   width: 100%;
   background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(../images/more/visual.jpg);
-  /* 백그라운드 명령어를 먼저 주고나서 백그라운드 속성들을 줘야한다. */
   background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(../images/more/visual.jpg);
   background-color: #aaa;  
   background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat; 
   overflow: hidden;
-  /* 반응형때 이미지 위치가 잘 보이게 줄어들게 하려면 백그라운드 포지션으로 조절가능*/
 }
 .morepage-visual-title{
-  /* 마진 오토 가운데 정렬은 width값을 안줘서 안됐었음 */
   display: block;
-  /* padding: 180px auto 90px auto; ?? */
   margin: 180px auto 90px auto;
   color: #fff;
   font-size: 60px;
   text-align: center;
-  font-family: Montserrat, sans-serif;
   font-weight: 400;
   line-height: 80px;
 }
-
-/* 메인 */
 .morepage-list{
   width: 940px;
   margin: 0 auto;
 }
-/* 메뉴 */
 .morepage-list-menu{
   margin: 0;
   padding: 35px 0 0 0;
@@ -1061,8 +952,7 @@ input[type="radio"]:disabled {
   border-bottom: 1px solid #222222;
   padding: 9px 30px 10px 30px;
 }
-
-/* 리스트 */
+/* 더 많은 서비스 컨텐츠 리스트 */
 .morepage-list-items{
   padding: 0;
   margin-top: 25px;
@@ -1095,7 +985,7 @@ input[type="radio"]:disabled {
 .morepage-list-items li:hover{
   opacity: 70%;
 }
-/* 푸터 */
+/* 더 많은 서비스 푸터 */
 .footer-more{
   margin: 0;
   padding: 40px 50px;
@@ -1141,8 +1031,74 @@ input[type="radio"]:disabled {
   line-height: 20px;
   letter-spacing: 1px;
   opacity: 0.6;
-  width: 63px;
 }
 .morepage-footer-link a:hover{
   opacity: 100%;
+}
+/* 견적내기-폼 영역 */
+.main-build {
+  margin-top: 100px;
+}
+.quote {
+  text-align: left;
+  margin: 0px 30px;
+  padding: 30px 0;
+}
+.quote .title {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.quote .title h3 {
+  font-weight: 400;
+}
+.quote .title .img {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+.quote .review-item {
+  color: #fece32;
+  margin-top: 10px;
+}
+.quote .sub-text {
+  color: #333;
+  font-size: .9rem;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 30px 0 80px;
+}
+.editor-detail {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.editor-detail .item label {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.editor-detail .item input, .editor-detail .item textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 0 8px 12px;
+  font-size: 14px;
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.editor-detail .item textarea {
+  height: auto;
+}
+.btn-estimate {
+  font-size: inherit;
+  padding: 9px 15px;
+  border-radius: 0;
+  background-color: #3898EC;
+  color: #fff;
+  font-size: 14px;
 }
