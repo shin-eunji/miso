@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
-
 /* 공통 */
 /* 본문 기본 스타일 */
 *,
@@ -863,7 +862,7 @@ input[type="radio"]:disabled {
   position: relative;
   top: 2px;
   margin: 0 3px;
-  color: red !important;
+  color: red;
 }
 .footer-reservation ul li a {
   color: #777;
